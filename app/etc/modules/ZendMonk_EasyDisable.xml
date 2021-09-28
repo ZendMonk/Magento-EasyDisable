@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<ZendMonk_EasyDisable>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Core />
+            </depends>
+		</ZendMonk_EasyDisable>
+	</modules>
+</config>

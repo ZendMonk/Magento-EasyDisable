@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<config>
+   <sections>
+        <web>
+			<groups>
+				<breadcrumbs translate="label" module="zendmonk_easydisable">
+                    <label>Breadcrumbs</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>8</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<remove_from_all translate="label">
+							<label>Remove Breadcrumbs from all Pages</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</remove_from_all>
+                        <remove_from_particular translate="label">
+                            <label>Remove Breadcrumbs from particular Pages only</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removebreadcrumbsfrom</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+							<depends>
+								<remove_from_all>0</remove_from_all>
+							</depends>
+                        </remove_from_particular>
+                    </fields>
+                </breadcrumbs>
+				<polls>
+					<fields>
+						<disabled translate="label" module="zendmonk_easydisable">
+                            <label>Disable Polls</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+					</fields>
+				</polls>
+			</groups>
+		</web>
+		<design>
+			<groups>
+				<page_columns translate="label" module="zendmonk_easydisable">
+                    <label>Page Columns</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>35</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+						<remove_callout_left translate="label">
+							<label>Remove Default Callout Left</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</remove_callout_left>
+                        <remove_callout_right translate="label">
+                            <label>Remove Default Callout Right</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </remove_callout_right>
+                    </fields>
+                </page_columns>
+			</groups>
+		</design>
+		<catalog>
+            <groups>
+				<review>
+					<fields>
+                        <disabled translate="label" module="zendmonk_easydisable">
+                            <label>Disable Product Reviews</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </disabled>
+                    </fields>
+				</review>
+				<tags translate="label" module="zendmonk_easydisable">
+                    <label>Product Tags</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>105</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <disabled translate="label">
+                            <label>Disable Product Tags</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+                    </fields>
+                </tags>
+				<product_comparison translate="label" module="zendmonk_easydisable">
+                    <label>Product Comparison</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <disabled translate="label">
+                            <label>Disable Product Comparison</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+                    </fields>
+                </product_comparison>
+				<recently_products>
+					<fields>
+						<remove_sidebar translate="label" module="zendmonk_easydisable">
+							<label>Remove Recently Viewed/Compared Products Sidebar if Default Count is "0"</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</remove_sidebar>
+					</fields>
+				</recently_products>
+                <search>
+                    <fields>
+						<disabled translate="label" module="zendmonk_easydisable">
+                            <label>Disable Catalog Search</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+						<advanced_disabled translate="label" module="zendmonk_easydisable">
+                            <label>Disable Advanced Catalog Search</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </advanced_disabled>
+					</fields>
+				</search>
+			</groups>
+		</catalog>
+		<newsletter>
+			<groups>
+				<general translate="label" module="zendmonk_easydisable">
+					<label>General Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <disabled translate="label">
+                            <label>Disable Newsletter</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+                    </fields>
+				</general>
+			</groups>
+		</newsletter>
+		<customer_dashboard translate="label" module="zendmonk_easydisable">
+			<class>separator-top</class>
+            <label>Customer Account Dashboard</label>
+            <tab>customer</tab>
+            <sort_order>135</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<remove_login_welcome_msg translate="label">
+							<label>Remove Login Welcome Message</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</remove_login_welcome_msg>
+					</fields>
+				</general>
+				<remove translate="label">
+					<label>Remove unwanted Pages and Links</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<orders translate="label">
+							<label>My Orders</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removemaybe</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</orders>
+						<billing_agreements translate="label">
+							<label>Billing Agreements</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removeormaybenot</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</billing_agreements>
+						<recurring_profiles translate="label">
+							<label>Recurring Profiles</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removeormaybenot</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</recurring_profiles>
+						<review translate="label">
+							<label>My Product Reviews</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removemaybe</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</review>
+						<tags translate="label">
+							<label>My Tags</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removemaybe</source_model>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</tags>
+						<wishlist translate="label">
+							<label>My Wishlist</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removemaybe</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</wishlist>
+						<applications translate="label">
+							<label>My Applications</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removeormaybenot</source_model>
+                            <sort_order>35</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</applications>
+						<newsletter_subscriptions translate="label">
+							<label>Newsletter Subscriptions</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removeormaybenot</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</newsletter_subscriptions>
+						<downloadable translate="label">
+							<label>My Downloadable Products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>zendmonk_easydisable/system_config_source_removeormaybenot</source_model>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</downloadable>
+					</fields>
+				</remove>
+			</groups>
+		</customer_dashboard>
+		<wishlist>
+			<groups>
+				<wishlist_link>
+					<fields>
+						<remove_from_toplinks translate="label" module="zendmonk_easydisable">
+							<label>Remove from Toplinks if Wishlist doesn't contain any Products or Customer is not logged in</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</remove_from_toplinks>
+					</fields>
+				</wishlist_link>
+			</groups>
+		</wishlist>
+		<sales>
+			<groups>
+				<reorder>
+					<fields>
+                        <remove_sidebar translate="label" module="zendmonk_easydisable">
+                            <label>Remove Reorder Sidebar</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </remove_sidebar>
+                    </fields>
+				</reorder>
+				<orders_returns translate="label" module="zendmonk_easydisable">
+                    <label>Orders and Returns</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>25</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <disabled translate="label">
+                            <label>Disable Orders and Returns</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+                    </fields>
+                </orders_returns>
+			</groups>
+		</sales>
+		<checkout>
+			<groups>
+				<estimate_shipping_and_tax translate="label" module="zendmonk_easydisable">
+					<label>Estimate Shipping and Tax</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>80</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<disabled translate="label">
+							<label>Disable Estimate Shipping and Tax</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+						</disabled>
+					</fields>
+				</estimate_shipping_and_tax>
+			</groups>
+		</checkout>
+		<discount_codes translate="label" module="zendmonk_easydisable">
+			<class>separator-top</class>
+            <label>Discount Codes</label>
+            <tab>sales</tab>
+            <sort_order>800</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			<groups>
+				<general translate="label">
+					<label>General Options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<disabled translate="label">
+                            <label>Disable Discount Codes</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </disabled>
+					</fields>
+				</general>
+			</groups>
+		</discount_codes>
+	</sections>
+</config>

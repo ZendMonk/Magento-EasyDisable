@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="left">
+			<action method="unsetChild" ifconfig="design/page_columns/remove_callout_left">
+				<name>left.permanent.callout</name>
+			</action>
+		</reference>
+		<reference name="right">
+			<action method="unsetChild" ifconfig="design/page_columns/remove_callout_right">
+				<name>right.permanent.callout</name>
+			</action>
+		</reference>
+		<reference name="footer_links">
+			<action method="removeLinkByUrl" ifconfig="catalog/search/advanced_disabled">
+                <url helper="catalogsearch/getAdvancedSearchUrl" />
+            </action>
+			<action method="removeLinkBlock" ifconfig="sales/orders_returns/disabled">
+                <blockName>return_link</blockName>
+            </action>
+		</reference>
+	</default>
+	<customer_account>
+		<reference name="customer_account_navigation">
+			<block type="zendmonk_easydisable/customer_account_navigation_links" name="easydisable_customer_account_navigation_links">
+				<action method="removeDisabled" />
+			</block>
+		</reference>
+	</customer_account>
+	<checkout_cart_index>
+		<reference name="checkout.cart">
+			<action method="unsetChild" ifconfig="checkout/estimate_shipping_and_tax/disabled">
+				<name>shipping</name>
+			</action>
+			<action method="unsetChild" ifconfig="discount_codes/general/disabled">
+				<name>coupon</name>
+			</action>
+		</reference>
+	</checkout_cart_index>
+	<product_reviews_disabled>
+		<reference name="customer_account_navigation">
+			<action method="removeLinkByName">
+				<name>reviews</name>
+			</action>
+		</reference>
+		<remove name="customer_account_dashboard_info1" />
+	</product_reviews_disabled>
+	<catalog_search_disabled>
+		<remove name="top.search" />
+	</catalog_search_disabled>
+	<product_tags_disabled>
+		<remove name="tags_popular" />
+		<remove name="product_tag_list" />
+		<reference name="customer_account_navigation">
+			<action method="removeLinkByName">
+				<name>tags</name>
+			</action>
+		</reference>
+		<remove name="customer_account_dashboard_info2" />
+	</product_tags_disabled>
+	<product_comparison_disabled>
+		<remove name="catalog.compare.sidebar" />
+	</product_comparison_disabled>
+	<newsletter_disabled>
+		<remove name="left.newsletter" />
+		<reference name="customer_account_navigation">
+			<action method="removeLinkByName">
+				<name>newsletter</name>
+			</action>
+		</reference>
+	</newsletter_disabled>
+	<polls_disabled>
+		<remove name="right.poll" />
+	</polls_disabled>
+	<remove_breadcrumbs>
+		<reference name="root">
+			<action method="unsetChild">
+				<name>breadcrumbs</name>
+			</action>
+		</reference>
+	</remove_breadcrumbs>
+	<remove_recently_viewed_products_sidebar>
+		<remove name="left.reports.product.viewed" />
+		<remove name="right.reports.product.viewed" />
+	</remove_recently_viewed_products_sidebar>
+	<remove_recently_compared_products_sidebar>
+		<remove name="right.reports.product.compared" />
+	</remove_recently_compared_products_sidebar>
+	<remove_reorder_sidebar>
+		<remove name="sale.reorder.sidebar" />
+	</remove_reorder_sidebar>
+	<remove_wishlist_link>
+		<reference name="top.links">
+			<action method="removeLinkBlock">
+				<blockName>wishlist_link</blockName>
+			</action>
+		</reference>
+	</remove_wishlist_link>
+</layout>
